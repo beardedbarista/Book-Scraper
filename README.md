@@ -13,7 +13,6 @@ The following Python libraries are required to run this project:
 
 You can install these dependencies using pip:
 
-bash
 
 pip install flask requests beautifulsoup4 psycopg2
 
