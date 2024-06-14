@@ -24,12 +24,15 @@ The project consists of the following files:
     main.py: The main Python script that contains the web scraper and Flask application.
     Category_URL.py: A Python file containing a list of category URLs for the website.
 
-Code Explanation
+#Code Explanation
+
 main.py
-Imports
+
+#Imports
 
 The script imports the required libraries: Flask, requests, BeautifulSoup, and psycopg2.
-scrape_books Function
+
+# scrape_books Function
 
     This function scrapes book data from the website.
     It starts with the base URL for the "Books" category and loops through the list of category URLs from Category_URL.py.
@@ -40,32 +43,32 @@ scrape_books Function
     The scraped book data is stored in a list of dictionaries, with each dictionary representing a book.
     The function handles exceptions that may occur during the scraping process.
 
-extract_book_data Function
+#extract_book_data Function
 
     This is a helper function that extracts book data from individual book pages.
     It takes the BeautifulSoup object and the genre as input.
     It loops through the book elements on the page and extracts the book data (title, price, availability, rating).
     The extracted book data is appended to a list, which is returned by the function.
 
-insert_books_into_database Function
+#insert_books_into_database Function
 
     This function is responsible for inserting the scraped book data into a PostgreSQL database.
     It creates separate tables for each genre if they don't already exist.
     It then inserts the book data into the corresponding genre table, handling any unique constraint violations.
     This function uses user input for database credentials for security purposes.
 
-Flask Routes
+#Flask Routes
 
     The /books route calls the scrape_books function to scrape book data from all categories.
     If the scraping is successful, it calls the insert_books_into_database function to insert the scraped data into the database.
     The scraped book data is returned as a JSON response.
     If the scraping fails, an error message is returned as a JSON response.
 
-Main Function
+#Main Function
 
     The script runs the Flask application in debug mode when executed directly.
 
-Usage
+#Usage
 
     Make sure you have installed the required dependencies.
     Create a PostgreSQL database.
