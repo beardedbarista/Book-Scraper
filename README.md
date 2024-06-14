@@ -24,7 +24,7 @@ The project consists of the following files:
     main.py: The main Python script that contains the web scraper and Flask application.
     Category_URL.py: A Python file containing a list of category URLs for the website.
 
-#Code Explanation
+# Code Explanation
 
 main.py
 
