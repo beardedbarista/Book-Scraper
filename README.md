@@ -71,7 +71,8 @@ The script imports the required libraries: Flask, requests, BeautifulSoup, and p
 # Usage
     1. Make sure you have installed the required dependencies.
     2. Create a PostgreSQL database.
-    3. Update the insert_books_into_database function with your database credentials and setup. Also, update the db_name variable to the name of the database you are using.
+    3. Update the insert_books_into_database function with your database credentials and setup. Also, 
+    update the db_name variable to the name of the database you are using.
     4. Run the main.py script.
     5. Visit http://localhost:5000/books in your web browser to trigger the scraping process and insert the scraped data into the database.
 
